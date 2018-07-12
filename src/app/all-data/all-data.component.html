@@ -1,0 +1,171 @@
+<div class="row tile_count">
+  <div class="col-md-3 col-sm-6 col-xs-9 tile_stats_count">
+    <span class="count_top"><i class="fa fa-percent"></i> Percentage Device used(Weekly)</span>
+    <div class="count">36 %</div>
+    <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-9 tile_stats_count">
+    <span class="count_top"><i class="fa fa-percent"></i> Percentage Device Used(Daily)</span>
+    <div class="count">18 %</div>
+    <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span> -->
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-9 tile_stats_count">
+    <span class="count_top"><i class="fa fa-repeat" style="padding-left: 5px"></i> Weekly Frequency</span>
+    <div class="count green">8</div>
+    <!-- <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span> -->
+  </div>
+  <div class="col-md-3 col-sm-6 col-xs-9 tile_stats_count">
+    <span class="count_top"><i class="fa fa-repeat"></i> Daily Frequency</span>
+    <div class="count">5</div>
+    <!-- <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span> -->
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="dashboard_graph">
+      <div class="row x_title">
+        <div class="col-md-10">
+          <h3>User Activities <small>In Aabsolute Units</small></h3>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-round btn-default" (click)="getDaily()">Daily</button>
+          <button type="button" class="btn btn-round btn-default" (click)="getWeekly()">Weekly</button>
+          <button type="button" class="btn btn-round btn-default" (click)="getMonthly()">Monthly</button>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <!-- <activities-graph [ActivityData]="activityData"></activities-graph> -->
+        <!-- <p-chart #chart type="line" [data]="activityData" height="500px"></p-chart> -->
+        
+          <canvas id="canvas" height="105vh"></canvas>
+        
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="x_panel tile fixed_height_320">
+      <div class="x_title">
+        <h3>Top Events</h3>
+        <ul class="nav navbar-right panel_toolbox">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-arrow-circle-down"></i></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Daily</a>
+              </li>
+              <li><a href="#">Weekly</a>
+              </li>
+              <li><a href="#">Monthly</a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <!-- <top-events></top-events> -->
+        <ul class="list-unstyled timeline">
+          <li>
+            <div class="block">
+              <div class="tags">
+                <a href="" class="tag">
+                  <span>Top 1</span>
+                </a>
+              </div>
+              <div class="block_content">
+                <h4>Youtube-Whatsapp</h4>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <div class="tags">
+                <a href="" class="tag">
+                  <span>Top 2</span>
+                </a>
+              </div>
+              <div class="block_content">
+                <h4>Youtube-Messaging</h4>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="block">
+              <div class="tags">
+                <a href="" class="tag">
+                  <span>Top 3</span>
+                </a>
+              </div>
+              <div class="block_content">
+                <h4>Video-Whatsapp</h4>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="x_panel tile fixed_height_320 overflow_hidden">
+      <div class="x_title">
+        <h3>Device Usage</h3>
+        <ul class="nav navbar-right panel_toolbox">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-arrow-circle-down"></i></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Daily</a>
+              </li>
+              <li><a href="#">Weekly</a>
+              </li>
+              <li><a href="#">Monthly</a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+       <device-usage-table></device-usage-table>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    <div class="x_panel tile fixed_height_320">
+      <div class="x_title">
+        <h3>User Behavior</h3>
+        <ul class="nav navbar-right panel_toolbox">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-arrow-circle-down"></i></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">J6</a>
+              </li>
+              <li><a href="#">A6/A6+</a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <div class="sidebar-widget">
+          <!-- <h4>Ratio of new users and returning users</h4> -->
+          <!-- <behavior-graph [BehaviorData]="behaviorData"></behavior-graph> -->
+          <canvas id="behaviorChart" height="120vh"></canvas>
+          <h4>Weekly data in percentage</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+  <div class="menu_section">
+    <ul class="nav side-menu">
+      <li><a routerLink="/summary"><i class="fa fa-list-alt"></i> Summary</a></li>
+      <li *ngFor="let app of apps"><a  [routerLink]="['/app',app.id]">{{app.name}}</a></li>
+      <!-- <li><a routerLink="/app/cov"><i class="fa fa-mobile"></i> ChatOverVideo </a></li>
+      <li><a routerLink="/app/sc"><i class="fa fa-mobile"></i> Social Camera </a></li>
+      <li><a routerLink="/app/tr"><i class="fa fa-mobile"></i> Transliteration </a></li>
+      <li><a routerLink="/app/mgs"><i class="fa fa-mobile"></i> My Galaxy Stories </a></li>
+      <li><a routerLink="/app/mgw"><i class="fa fa-mobile"></i> My Galaxy Widget </a></li> -->
+    </ul>
+  </div>
+</div>
